@@ -19,13 +19,18 @@
   .progress-container > div {
     text-align: center;
     padding: 3px 3% 13px 3%;
+    width: 80%;
   }
   .about-block {
-
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+  .about-block > div {
+    width: 80%;
+    height: 100%;
+    text-align: left;
   }
   .about-elements {
     padding: 7px 0;
