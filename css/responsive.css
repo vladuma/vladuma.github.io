@@ -1,0 +1,64 @@
+/* Very small devices (portrait tablets and large phones, up to 360px) */
+@media only screen and (max-width: 360px) {
+  #projects-list .project {
+    width: calc(100% - 10px)!important;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, up to 600px) */
+@media only screen and (max-width: 600px) {
+  .skill {
+    width: 33%;
+  }
+  .progress-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .progress-container > div {
+    text-align: center;
+    padding: 3px 3% 13px 3%;
+  }
+  .about-block {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .about-avatar {
+    display: block;
+  }
+  .contact-info {
+    flex-direction: column;
+
+  }
+  .half-screen {
+    width: 100%;
+    margin: 13px 0;
+  }
+  form textarea{
+    margin: 13px 0;
+  }
+}
+
+/* Medium devices (landscape tablets, up to 768px) */
+@media only screen and (max-width: 768px) {
+  .project {
+    width: calc(50% - 10px)!important;
+  }
+}
+
+/* Large devices (laptops/desktops, up to 992px) */
+@media only screen and (max-width: 992px) {
+  .project {
+    width: calc(33.3% - 10px);
+  }
+}
+
+
+/* Extra large devices (large laptops and desktops, up to 1200px) */
+@media only screen and (max-width: 1200px) {
+
+}

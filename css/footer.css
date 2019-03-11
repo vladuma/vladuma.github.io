@@ -1,0 +1,18 @@
+footer{
+  min-height: 100px;
+  background-color: black;
+}
+.footer-icons {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  min-height: 100px;
+  font-size: 200%;
+}
+
+.footer-icons a {
+  color: grey;
+}
+.footer-icons a:hover{
+  color: yellow;
+}

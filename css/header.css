@@ -1,0 +1,64 @@
+header {
+  position: relative;
+  height: 100vh;
+  background-color: black;
+  /* background-color: #2d3436; */
+  /* background-image: linear-gradient(315deg, #2d3436 0%, #000000 74%); */
+  color: white;
+}
+nav {
+  background-color: black;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+}
+nav ul {
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li a{
+  display: block;
+  padding: 7px 20px;
+  color: white;
+  cursor: pointer;
+}
+nav ul li a:hover{
+  background-color: white;
+  color: black;
+}
+
+.hero-banner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-elements{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-elements h3 {
+  font-size: 300%;
+  padding: 13px;
+}
+.hero-elements h3 span{
+  color: #ffff00;
+}
+.hero-elements .to-portfolio{
+  font-size: 133%;
+  margin: 7px;
+}
+.hero-elements .to-portfolio a{
+  color: white;
+}
+.hero-elements .to-portfolio a:hover{
+  color: black;
+}
