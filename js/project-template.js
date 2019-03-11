@@ -44,7 +44,7 @@ var projects = [
     type: 'bootstrap',
     description: 'Agency website built from scratch with Bootstrap 4.',
     tags: ['HTML', 'CSS', 'JavaScript', 'jQuery', 'Bootstrap 4'],
-    link: '',
+    link: 'https://vladuma.github.io/bootstrap-site/index.html',
     img: 'http://www.nexi.fr/wp-content/uploads/2015/01/logo-bootstrap.png'
   },
   {
