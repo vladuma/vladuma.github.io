@@ -70,6 +70,15 @@ var projects = [
     link: 'https://wordpress.org/plugins/very-simple-google-analytics-tracking/',
     git: 'https://github.com/vladuma/Very-Simple-Google-Analytics-Tracking',
     img: 'http://www.sclance.com/pngs/google-analytics-logo-png/google_analytics_logo_png_592806.png'
+  },
+  {
+    name: 'MVC ToDo List',
+    type: 'javascript',
+    description: 'Basic to-do list built by MVC model',
+    tags: ['JavaScript', 'MVC', 'HTML'],
+    link: 'https://codepen.io/vladuma/project/editor/ZgzVGv',
+    git: '',
+    img: ''
   }
 ]
 

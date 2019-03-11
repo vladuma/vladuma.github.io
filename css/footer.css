@@ -13,8 +13,8 @@ footer{
 .footer-icons a, .footer-links a, .footer-links span {
   color: grey;
 }
-.footer-icons a:hover{
-  color: yellow;
+.footer-icons a:hover, .footer-links a:hover {
+  color: #ffff00;
 }
 .footer-links {
   text-align: center;
