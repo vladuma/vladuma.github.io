@@ -27,6 +27,9 @@
     justify-content: center;
     align-items: center;
   }
+  .about-elements {
+    padding: 7px 0;
+  }
   .about-avatar {
     display: block;
   }

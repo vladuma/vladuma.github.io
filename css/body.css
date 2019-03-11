@@ -49,6 +49,7 @@
 .about-avatar {
   display: flex;
   justify-content: center;
+  padding: 14px 0;
 }
 .about-avatar > img {
   width: 50%;
