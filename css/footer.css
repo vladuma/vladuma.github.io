@@ -10,9 +10,13 @@ footer{
   font-size: 200%;
 }
 
-.footer-icons a {
+.footer-icons a, .footer-links a, .footer-links span {
   color: grey;
 }
 .footer-icons a:hover{
   color: yellow;
+}
+.footer-links {
+  text-align: center;
+  height: 21px;
 }

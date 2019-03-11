@@ -101,6 +101,10 @@
 #contact {
   padding: 30px 15% 50px 15%;
 }
+#contact p {
+  margin: 0 0 21px;
+  text-align: center;
+}
 form{
   width: 100%;
   display: flex;

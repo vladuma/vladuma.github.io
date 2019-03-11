@@ -5,6 +5,7 @@ var projects = [
     description: 'Corporate website with a catalog built on WordPress',
     tags: ['HTML', 'CSS', 'JavaScript', 'jQuery', 'PHP'],
     link: 'http://sohrani.pro/',
+    git: null,
     img: ''
   },
   {
@@ -13,6 +14,7 @@ var projects = [
     description: 'Corporate WordPress website',
     tags: ['HTML', 'CSS', 'JavaScript', 'jQuery'],
     link: 'http://lift2work.nl/',
+    git: null,
     img: null
   },
   // {
@@ -21,6 +23,7 @@ var projects = [
   //   description: 'Corporate website built on WordPress',
   //   tags: ['HTML', 'CSS', 'JavaScript', 'jQuery', 'PHP'],
   //   link: '',
+  //   git: 'http://sohrani.pro/',
   //   img: null
   // },
   {
@@ -29,7 +32,17 @@ var projects = [
     description: 'Simple react app to check weather',
     tags: ['React', 'JavaScript'],
     link: 'https://vladuma.github.io/react_app/',
+    git: 'https://github.com/vladuma/react_app',
     img: './img/react-weather-app.png'
+  },
+  {
+    name: 'Combo breaker',
+    type: 'javascript',
+    description: 'Simple JavaScript game. Guess a number to win.',
+    tags: ['JavaScript'],
+    link: 'https://vladuma.github.io/combo-cracker/index.html',
+    git: 'https://github.com/vladuma/combo-cracker',
+    img: ''
   },
   {
     name: 'Snake game',
@@ -37,6 +50,7 @@ var projects = [
     description: 'My take on iconic cellphone game',
     tags: ['JavaScript', 'p5.js', 'HTML', 'CSS'],
     link: 'https://vladuma.github.io/snake-game/',
+    git: 'https://github.com/vladuma/snake-game',
     img: './img/snake.png'
   },
   {
@@ -45,6 +59,7 @@ var projects = [
     description: 'Agency website built from scratch with Bootstrap 4.',
     tags: ['HTML', 'CSS', 'JavaScript', 'jQuery', 'Bootstrap 4'],
     link: 'https://vladuma.github.io/bootstrap-site/index.html',
+    git: 'https://github.com/vladuma/bootstrap-site',
     img: 'http://www.nexi.fr/wp-content/uploads/2015/01/logo-bootstrap.png'
   },
   {
@@ -53,6 +68,7 @@ var projects = [
     description: 'Very simple Google Analytics plugin for WordPress',
     tags: ['PHP'],
     link: 'https://wordpress.org/plugins/very-simple-google-analytics-tracking/',
+    git: 'https://github.com/vladuma/Very-Simple-Google-Analytics-Tracking',
     img: 'http://www.sclance.com/pngs/google-analytics-logo-png/google_analytics_logo_png_592806.png'
   }
 ]
@@ -75,6 +91,13 @@ $(document).ready(function(){
       }
       return projectTags.join(' ')
     }
+    function ifGit(){
+      if (projects[i].git) {
+        return ` <span> | </span><a href="${projects[i].git}" target="_blank">GitHub</a>`;
+      } else {
+        return ``;
+      }
+    }
 
     var project = `
     <div data-project-type="${projects[i].type}" class="project filter-item">
@@ -88,7 +111,10 @@ $(document).ready(function(){
             <div class="tags">
               ${outputTags()}
             </div>
-            <a href="${projects[i].link || '#'}" target="_blank">Link</a>
+            <div class="link-container">
+              <a href="${projects[i].link || '#'}" target="_blank">Link</a>
+              ${ifGit()}
+            </div>
           </div>
         </div>
       </div>
