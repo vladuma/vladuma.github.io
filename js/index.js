@@ -59,8 +59,6 @@ $(document).ready(function(){
   			$(this).delay(200).slideDown("fast");
   		});
   	} else {
-  		//Notice this *=" <- This means that if the data-category contains multiple options, it will find them
-  		//Ex: data-category="Cat1, Cat2"
   		$(".stack").find("div[data-skill-level*=" + value + "]").each(function (i) {
   			$(this).delay(200).slideDown("fast");
   		});
@@ -75,8 +73,8 @@ $(document).ready(function(){
         $(this).delay(200).slideDown("fast");
       });
     } else {
-      //Notice this *=" <- This means that if the data-category contains multiple options, it will find them
-      //Ex: data-category="Cat1, Cat2"
+      // var toShow = $('div[data-project-type*="' + value.replace( /\s/g, '') + '"]":contains("div[data-project-hidden="visible"]');
+      // console.log(toShow);
       $("#project-grid").find("div[data-project-type*=" + value + "]").each(function (i) {
         $(this).delay(200).slideDown("fast");
       });

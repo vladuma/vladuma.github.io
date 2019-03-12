@@ -6,7 +6,8 @@ var projects = [
     tags: ['HTML', 'CSS', 'JavaScript', 'jQuery', 'PHP'],
     link: 'http://sohrani.pro/',
     git: null,
-    img: ''
+    img: '',
+    hidden: false
   },
   {
     name: 'LIFT2WORK.nl',
@@ -15,7 +16,8 @@ var projects = [
     tags: ['HTML', 'CSS', 'JavaScript', 'jQuery'],
     link: 'http://lift2work.nl/',
     git: null,
-    img: null
+    img: null,
+    hidden: false
   },
   // {
   //   name: 'destiltevertelt.nl',
@@ -33,7 +35,8 @@ var projects = [
     tags: ['React', 'JavaScript'],
     link: 'https://vladuma.github.io/react_app/',
     git: 'https://github.com/vladuma/react_app',
-    img: './img/react-weather-app.png'
+    img: './img/react-weather-app.png',
+    hidden: false
   },
   {
     name: 'Combo breaker',
@@ -42,7 +45,8 @@ var projects = [
     tags: ['JavaScript'],
     link: 'https://vladuma.github.io/combo-cracker/index.html',
     git: 'https://github.com/vladuma/combo-cracker',
-    img: ''
+    img: '',
+    hidden: false
   },
   {
     name: 'Snake game',
@@ -51,7 +55,8 @@ var projects = [
     tags: ['JavaScript', 'p5.js', 'HTML', 'CSS'],
     link: 'https://vladuma.github.io/snake-game/',
     git: 'https://github.com/vladuma/snake-game',
-    img: './img/snake.png'
+    img: './img/snake.png',
+    hidden: false
   },
   {
     name: 'Bootstrap site',
@@ -60,7 +65,8 @@ var projects = [
     tags: ['HTML', 'CSS', 'JavaScript', 'jQuery', 'Bootstrap 4'],
     link: 'https://vladuma.github.io/bootstrap-site/index.html',
     git: 'https://github.com/vladuma/bootstrap-site',
-    img: 'http://www.nexi.fr/wp-content/uploads/2015/01/logo-bootstrap.png'
+    img: './img/bootstrap.png',
+    hidden: false
   },
   {
     name: 'GA WordPress plugin',
@@ -69,7 +75,8 @@ var projects = [
     tags: ['PHP'],
     link: 'https://wordpress.org/plugins/very-simple-google-analytics-tracking/',
     git: 'https://github.com/vladuma/Very-Simple-Google-Analytics-Tracking',
-    img: 'http://www.sclance.com/pngs/google-analytics-logo-png/google_analytics_logo_png_592806.png'
+    img: './img/google_analytics.png',
+    hidden: false
   },
   {
     name: 'MVC ToDo List',
@@ -78,10 +85,25 @@ var projects = [
     tags: ['JavaScript', 'MVC', 'HTML'],
     link: 'https://codepen.io/vladuma/project/editor/ZgzVGv',
     git: '',
-    img: ''
+    img: '',
+    hidden: false
+  },
+  {
+    name: 'Clock',
+    type: 'javascript',
+    description: 'I heard a portfolio is not complete without a JS clock.',
+    tags: ['JavaScript', 'CSS', 'HTML'],
+    link: 'https://vladuma.github.io/javascript_clock',
+    git: 'https://github.com/vladuma/javascript_clock',
+    img: './img/clock.png',
+    hidden: true
   }
 ]
-
+// for (var i = 8; i < projects.length; i++) {
+//   projects[i] = {
+//     hidden: true
+//   }
+// }
 $(document).ready(function(){
   var root = $('#project-grid');
 
@@ -107,9 +129,16 @@ $(document).ready(function(){
         return ``;
       }
     }
+    function ifHidden(){
+      if (projects[i].hidden) {
+        return `data-project-hidden="hidden"`;
+      } else {
+        return `data-project-hidden="visible"`;
+      }
+    }
 
     var project = `
-    <div data-project-type="${projects[i].type}" class="project filter-item">
+    <div data-project-type="${projects[i].type}" ${ifHidden()} class="project filter-item">
       <div class="flip-card">
         <div class="flip-card-inner">
           <div class="flip-card-front">
@@ -132,4 +161,32 @@ $(document).ready(function(){
 
     root.append(project);
   }
+  // var availableProjects = $('.project.filter-item');
+  //
+  // if (availableProjects.length > 8) {
+  //   // for (var i = 8; i < projects.length; i++) {
+  //   //   $(availableProjects[i]).addClass('hidden');
+  //   // }
+  //   var hiddenProjects = $('.project.filter-item.hidden');
+  //
+  //   var moreBtnContainer = `
+  //   <div class="more-projects-container">
+  //     <div class="button-wb show-more-projects">Show projects</div>
+  //   </div>`;
+  //   root.append(moreBtnContainer);
+  //
+  //
+  //   $('.show-more-projects').click(function(){
+  //     var activeFilter = $(".projects .filters .active").text().toLowerCase();
+  //
+  //     if (activeFilter.includes('all')  ) {
+  //       $(hiddenProjects).toggleClass('hidden');
+  //     } else if (activeFilter !== 'all') {
+  //       $(hiddenProjects).filter(function() {return $(this).data('project-type', activeFilter)});
+  //       // console.log($(hiddenProjects).find($(hiddenProjects).data(activeFilter)));
+  //       // console.log($(".projects .filters .active").text().toLowerCase());
+  //       // console.log($(hiddenProjects).filter(function() {return $(this).data('project-type', activeFilter)}));
+  //     }
+  //   });
+  // }
 });

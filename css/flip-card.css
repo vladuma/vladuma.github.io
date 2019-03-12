@@ -47,7 +47,11 @@
  border: 1px solid #000;
 }
 .flip-card-front img {
-  width: 100%;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+  padding: 7%;
 }
 
 /* Style the back side */
@@ -77,4 +81,10 @@
   color: #ffff00;
   font-size: 80%;
   text-decoration: none;
+}
+.more-projects-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  z-index: 1000;
 }
