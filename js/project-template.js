@@ -145,6 +145,7 @@ $(document).ready(function(){
             ${hasImg()}
           </div>
           <div class="flip-card-back">
+            <p>${projects[i].name}</p>
             <p>${projects[i].description}</p>
             <div class="tags">
               ${outputTags()}

@@ -59,6 +59,7 @@
  background-color: black;
  color: white;
  transform: rotateY(180deg);
+ padding: 3%;
 }
 .flip-card-front .project-name {
   text-transform: lowercase;
