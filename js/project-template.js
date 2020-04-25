@@ -1,5 +1,25 @@
 var projects = [
   {
+    name: 'Starship game',
+    type: 'javascript',
+    description: 'Steer the X-Wing to collect stars and avoid asteroids',
+    tags: ['JavaScript', 'HTML Canvas', 'Webpack'],
+    link: 'https://vladuma.github.io/starship_game/dist/index.html',
+    git: 'https://github.com/vladuma/starship_game',
+    img: '',
+    hidden: false
+  },
+  {
+    name: 'Link manager app',
+    type: 'react',
+    description: 'A simple app built with React + Redux and Firease backend',
+    tags: ['React', 'Redux', 'Firebase', 'Webpack'],
+    link: 'https://vladuma.github.io/link-manager-app/',
+    git: 'https://github.com/vladuma/link-manager-app',
+    img: '',
+    hidden: false
+  },
+  {
     name: 'sohrani.pro',
     type: 'wordpress',
     description: 'Corporate website with a catalog built on WordPress',
@@ -19,15 +39,6 @@ var projects = [
     img: null,
     hidden: false
   },
-  // {
-  //   name: 'destiltevertelt.nl',
-  //   type: 'wordpress',
-  //   description: 'Corporate website built on WordPress',
-  //   tags: ['HTML', 'CSS', 'JavaScript', 'jQuery', 'PHP'],
-  //   link: '',
-  //   git: 'http://sohrani.pro/',
-  //   img: null
-  // },
   {
     name: 'Weather app',
     type: 'react',
@@ -81,7 +92,7 @@ var projects = [
   {
     name: 'MVC ToDo List',
     type: 'javascript',
-    description: 'Basic to-do list built by MVC model',
+    description: 'Basic to-do list built with MVC model',
     tags: ['JavaScript', 'MVC', 'HTML'],
     link: 'https://codepen.io/vladuma/project/editor/ZgzVGv',
     git: '',
@@ -99,11 +110,7 @@ var projects = [
     hidden: true
   }
 ]
-// for (var i = 8; i < projects.length; i++) {
-//   projects[i] = {
-//     hidden: true
-//   }
-// }
+
 $(document).ready(function(){
   var root = $('#project-grid');
 
