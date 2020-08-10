@@ -1,28 +1,73 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <Header />
+    <Skills 
+      :hardSkills="skills.hardSkills"
+      :softSkills="skills.softSkills"
+      :nextSkills="skills.nextSkills"
+    />
+    <Projects 
+      :projects="projects"
+    />
+    <Experience 
+      :experience="experience"
+    />
+    <About />
+    <Contact />
+    <Footer />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue';
+import './styles/reset.css';
+import './styles/style.scss';
+import './styles/responsive.scss';
+import '../node_modules/devicon/devicon.min.css';
+import '../node_modules/@fortawesome/fontawesome-free/css/all.css';
+
+import Header from './components/Header.vue';
+import Skills from './components/Skills.vue';
+import Projects from './components/Projects.vue';
+import Experience from './components/Experience.vue';
+import About from './components/About.vue';
+import Contact from './components/Contact.vue';
+import Footer from './components/Footer.vue';
+
+const hardSkills = require('./data/hard_skills.js');
+const softSkills = require('./data/soft_skills.js');
+const nextSkills = require('./data/next_skills.js');
+const projects = require('./data/project_data.js');
+const experience = require('./data/experience_data.js');
 
 export default {
   name: 'App',
   components: {
-    HelloWorld,
+    Header,
+    Skills,
+    Projects,
+    Experience,
+    About,
+    Contact,
+    Footer
   },
+  // props: [skills],
+  data: function() {
+    return {
+      skills: {
+        hardSkills: hardSkills,
+        softSkills: softSkills,
+        nextSkills: nextSkills,
+      },
+      projects: projects,
+      experience: experience,
+    }
+  }
 };
 </script>
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
 }
 </style>
