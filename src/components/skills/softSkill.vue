@@ -22,7 +22,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
 .soft-skills {
   padding: 20px 5%;
 }

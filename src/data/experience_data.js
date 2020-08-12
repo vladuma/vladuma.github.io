@@ -32,13 +32,13 @@ module.exports = [
         endDate: '07-30-2020',
         company: 'DEPLABS',
         jobTitle: 'Full stack developer',
-        description: 'Developing front-ends for e-commerce websites for medium and large international companies. Building fullstack ecommerce applications. Estimating taks, providing dev guidance. Mentoring new team members'
+        description: 'Building fullstack ecommerce applications. Lead developer on several support projects for key company accounts'
     },
     {
         startDate: '08-01-2020',
         endDate: '-',
         company: 'DEPLABS',
         jobTitle: 'Tech Lead',
-        description: 'Developing front-ends for e-commerce websites for medium and large international companies. Building fullstack ecommerce applications. Estimating taks, providing dev guidance. Mentoring new team members. Lead developer on several support projects for key accounts. Designing new features'
+        description: 'Estimating tasks, providing dev guidance. Designing and implementing new features. Mentoring new team members. Coordinating work load among developers and QA engeneers. Preparing and executing releases. Implementing new release, development and work standards'
     }
 ];
