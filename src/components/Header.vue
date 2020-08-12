@@ -24,7 +24,8 @@
         </vue-typed-js>
         <div class="hero-btns">
           <div class="to-portfolio">
-            <a class="button" href="./files/Vlad Duma CV - 2019.pdf" target="_blank">CV</a>
+            <!-- <a class="button" href="./files/Vlad Duma CV - 2019.pdf" target="_blank">Print CV</a> -->
+            <a class="button" v-on:click="printPage" target="_blank">Print CV</a>
           </div>
           <div class="to-portfolio">
             <a class="button" href="#projects-list">Portfolio</a>
@@ -40,6 +41,12 @@ import '../styles/header.scss';
 
 export default {
   name: 'Header',
+  methods: {
+    printPage() {
+      // alert('123');
+      window.print();
+    }
+  }
 };
 </script>
 

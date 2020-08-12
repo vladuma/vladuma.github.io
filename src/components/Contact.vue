@@ -3,11 +3,11 @@
       <h3>Contact</h3>
       <p>Have a question or want to work together?</p>
       <div class="contacts">
-        <span>
-          <a href="mailto:vlad0duma@gmail.com">vlad0duma@gmail.com</a>
+        <span v-if="email">
+          <a :href="email.link">{{email.value}}</a>
         </span>
-        <span>
-          +38 095 69 21 21 8
+        <span v-if="phone">
+          <a :href="phone.link">{{phone.value}}</a>
         </span>
       </div>
       <form id="contact-form" v-if="showForm">
@@ -40,12 +40,20 @@
  
 export default {
     name: "Contact",
+    props: {
+        contacts: {
+            type: Array,
+            required: true,
+        }
+    },
     data() {
         return {
             requiredMessage: false,
             errorMessage: false,
             successMessage: false,
-            showForm: true
+            showForm: true,
+            email: this.contacts.find(contact => contact.name === "Email"),
+            phone: this.contacts.find(contact => contact.name === "Phone"),
         }
     },
     methods: {
