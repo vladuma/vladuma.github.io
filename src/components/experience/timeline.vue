@@ -72,7 +72,6 @@ export default {
             el.ranges.push(step.rangeIndex);
           }
         })
-        console.log(el);
       })
     },
     datesToRange() {
@@ -97,7 +96,6 @@ export default {
         }
         this.dateRange = result.slice(this.minMth, result.length - (11 - this.nowMth));
         this.lastRangeIndex = this.dateRange.length;
-        console.log(3, this.lastRangeIndex);
       },
       getCurrentStep(x) {
         return this.sortedData.filter(d => {
@@ -110,8 +108,6 @@ export default {
       updateCurrentRange(e) {
         this.currentStep = this.getCurrentStep(parseInt(e.target.value));
         this.currentDate = this.getCurrentDate(parseInt(e.target.value));
-        console.log(1, this.currentStep);
-        console.log(2, this.currentDate);
       }
   }
 };

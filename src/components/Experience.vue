@@ -23,7 +23,6 @@ export default {
         Timeline
     },
     data() {
-        console.log(dayjs().$M);
         return {
             nowYear: dayjs().$y,
             nowMth: dayjs().$M,
