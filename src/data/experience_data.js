@@ -11,7 +11,7 @@ module.exports = [
         endDate: '10-30-2018',
         jobTitle: 'Web Developer / Marketing Manager',
         company: 'Ambtman Marine BV',
-        description: 'Was in charge of company websites and webshops, online marketing compaingns, and company ICT. Developed several company sites, a webshop, and numerous specialized tools for the website. Launched several SEM, SMM and email compaigns'
+        description: 'Was in charge of company websites and webshops, online marketing campaigns, and company ICT. Developed several company sites, a webshop, and numerous specialized tools for the website. Launched several SEM, SMM, and email campaigns'
     },
     {
         startDate: '09-01-2017',
