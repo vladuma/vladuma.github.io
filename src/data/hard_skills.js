@@ -26,6 +26,11 @@ module.exports = [
     },
     {
         level: 'advanced',
+        name: 'Backbone',
+        icon: 'devicon-backbonejs-plain'
+    },
+    {
+        level: 'advanced',
         name: 'AWS',
         icon: 'devicon-amazonwebservices-original'
     },
@@ -48,11 +53,6 @@ module.exports = [
         level: 'intermediate',
         name: 'React',
         icon: 'devicon-react-original-wordmark'
-    },
-    {
-        level: 'intermediate',
-        name: 'Backbone',
-        icon: 'devicon-backbonejs-plain'
     },
     {
         level: 'intermediate',
