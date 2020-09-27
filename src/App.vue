@@ -16,11 +16,11 @@
     <Contact />
     <Footer />
     <Print 
-      :hardSkills="data.hardSkills || []"
-      :softSkills="data.softSkills || []"
-      :experience="data.experience || []"
-      :social_media="data.social_media || []"
-      :contacts="data.contacts || []"
+      :hardSkills="hardSkills || []"
+      :softSkills="softSkills || []"
+      :experience="experience || []"
+      :social_media="social_media || []"
+      :contacts="contacts || []"
     />
   </div>
 </template>
