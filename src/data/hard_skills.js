@@ -21,6 +21,21 @@ module.exports = [
     },
     {
         level: 'advanced',
+        name: 'Vue',
+        icon: 'devicon-vuejs-plain'
+    },
+    {
+        level: 'advanced',
+        name: 'AWS',
+        icon: 'devicon-amazonwebservices-original'
+    },
+    {
+        level: 'advanced',
+        name: 'LESS',
+        icon: 'devicon-less-plain-wordmark'
+    },
+    {
+        level: 'advanced',
         name: 'Bootstrap',
         icon: 'devicon-bootstrap-plain-wordmark'
     },
@@ -28,11 +43,6 @@ module.exports = [
         level: 'advanced',
         name: 'WordPress',
         icon: 'devicon-wordpress-plain-wordmark'
-    },
-    {
-        level: 'advanced',
-        name: 'LESS',
-        icon: 'devicon-less-plain-wordmark'
     },
     {
         level: 'intermediate',
@@ -46,13 +56,13 @@ module.exports = [
     },
     {
         level: 'intermediate',
-        name: 'Webpack',
-        icon: 'devicon-webpack-plain'
+        name: 'Node JS',
+        icon: 'devicon-nodejs-plain'
     },
     {
         level: 'intermediate',
-        name: 'Node JS',
-        icon: 'devicon-nodejs-plain'
+        name: 'Mongo DB',
+        icon: 'devicon-mongodb-plain'
     },
     {
         level: 'intermediate',
@@ -61,18 +71,23 @@ module.exports = [
     },
     {
         level: 'intermediate',
-        name: 'AWS',
-        icon: 'devicon-amazonwebservices-original'
+        name: 'Grunt',
+        icon: 'devicon-grunt-original'
+    },
+    {
+        level: 'intermediate',
+        name: 'Webpack',
+        icon: 'devicon-webpack-plain'
+    },
+    {
+        level: 'intermediate',
+        name: 'Bitbucket',
+        icon: 'devicon-bitbucket-plain'
     },
     {
         level: 'basic',
         name: 'PHP',
         icon: 'devicon-php-plain'
-    },
-    {
-        level: 'basic',
-        name: 'Mongo DB',
-        icon: 'devicon-mongodb-plain'
     },
     {
         level: 'basic',
