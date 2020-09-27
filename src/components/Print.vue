@@ -25,13 +25,13 @@
         </div>
         <div class="social-media-print">
           <p class="social-media-title">Find me on</p>
-          <div class="social-media-print-wrapper">
-            <div v-for="media in social_media" :key="media.link">
-              <a :href="media.link" target="_blank" :title="media.name">
-                <i :class="media.icon"></i>
-              </a>
-            </div>
-          </div>
+          <ul class="social-media-print-wrapper">
+            <li v-for="media in social_media" :key="media.link">
+                <a :href="media.link" target="_blank" :title="media.name">
+                  <i :class="media.icon"></i> {{media.name}}
+                </a>
+            </li>
+          </ul>
         </div>
       </div>
       <div class="right">
@@ -200,10 +200,17 @@ export default {
           &-wrapper {
             display: flex;
             justify-content: space-between;
+            flex-direction: column;
             padding: 0 2pt;
-
+            li {
+              padding: 7pt 0;
+            }
             a {
               color: black;
+              text-decoration: underline;
+              i {
+                text-decoration: underline;
+              }
             }
           }
         }
