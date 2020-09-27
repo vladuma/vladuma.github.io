@@ -13,14 +13,18 @@
       :experience="experience"
     />
     <About />
-    <Contact />
-    <Footer />
+    <Contact
+      :contacts="contacts"
+    />
+    <Footer 
+      :social_media="social_media"
+    />
     <Print 
-      :hardSkills="skills.hardSkills || []"
-      :softSkills="skills.softSkills || []"
-      :experience="experience || []"
-      :social_media="social_media || []"
-      :contacts="contacts || []"
+      :hardSkills="skills.hardSkills"
+      :softSkills="skills.softSkills"
+      :experience="experience"
+      :social_media="social_media"
+      :contacts="contacts"
     />
   </div>
 </template>
@@ -46,6 +50,8 @@ const softSkills = require('./data/soft_skills.js');
 const nextSkills = require('./data/next_skills.js');
 const projects = require('./data/project_data.js');
 const experience = require('./data/experience_data.js');
+const social_media = require('./data/social_media_data.js');
+const contacts = require('./data/contacts_data.js');
 
 export default {
   name: 'App',
@@ -59,7 +65,6 @@ export default {
     Footer,
     Print
   },
-  // props: [skills],
   data: function() {
     return {
       skills: {
@@ -69,6 +74,8 @@ export default {
       },
       projects: projects,
       experience: experience,
+      social_media: social_media,
+      contacts: contacts,
     }
   }
 };
