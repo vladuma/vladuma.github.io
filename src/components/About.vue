@@ -89,4 +89,13 @@
 .about-elements p {
     margin: 7px 0;
 }
+
+@media (max-width:600px) {
+  .about-block > div {
+    width: 75%;
+  }
+  .about-elements{
+    padding: 7px 7px 0 7px;
+  }
+}
 </style>

@@ -166,4 +166,11 @@ form textarea{
 .send-status .form-required-message {
     color: red;
 }
+
+@media only screen and (max-width: 600px) {
+  .half-screen {
+    width: 100%;
+    margin: 13px 0;
+  }
+}
 </style>
