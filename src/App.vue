@@ -15,6 +15,13 @@
     <About />
     <Contact />
     <Footer />
+    <Print 
+      :hardSkills="data.hardSkills || []"
+      :softSkills="data.softSkills || []"
+      :experience="data.experience || []"
+      :social_media="data.social_media || []"
+      :contacts="data.contacts || []"
+    />
   </div>
 </template>
 
@@ -32,6 +39,7 @@ import Experience from './components/Experience.vue';
 import About from './components/About.vue';
 import Contact from './components/Contact.vue';
 import Footer from './components/Footer.vue';
+import Print from './components/Print.vue';
 
 const hardSkills = require('./data/hard_skills.js');
 const softSkills = require('./data/soft_skills.js');
@@ -48,7 +56,8 @@ export default {
     Experience,
     About,
     Contact,
-    Footer
+    Footer,
+    Print
   },
   // props: [skills],
   data: function() {
