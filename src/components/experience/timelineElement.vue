@@ -91,7 +91,7 @@ export default {
                 list-style-type: disc;
                 
                 li {
-                    margin: 3px 0;
+                    margin: 7px 0;
                 }
             }
         }
