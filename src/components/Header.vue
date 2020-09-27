@@ -1,12 +1,15 @@
 <template>
   <header>
     <nav>
-      <ul>
+      <ul :class="{hidden: showNav}">
         <li>
           <a href="#skills-list">Stack</a>
         </li>
         <li>
           <a href="#projects-list">Portfolio</a>
+        </li>
+        <li>
+          <a href="#experience">Experience</a>
         </li>
         <li>
           <a href="#about">About</a>
@@ -15,6 +18,9 @@
           <a href="#contact">Contact</a>
         </li>
       </ul>
+      <div class="nav-icon">
+        <i v-on:click="openMobileNav" class="fas fa-bars 2x"></i>
+      </div>
     </nav>
     <div class="hero-banner">
       <div class="hero-elements">
@@ -24,10 +30,7 @@
         </vue-typed-js>
         <div class="hero-btns">
           <div class="to-portfolio">
-            <a class="button" href="./files/Vlad Duma CV - 2019.pdf" target="_blank">CV</a>
-          </div>
-          <div class="to-portfolio">
-            <a class="button" href="#projects-list">Portfolio</a>
+            <a class="button" v-on:click="printPage" target="_blank">Print CV <i class="fas fa-print"></i></a>
           </div>
         </div>
       </div>
@@ -40,10 +43,54 @@ import '../styles/header.scss';
 
 export default {
   name: 'Header',
+  data() {
+    return {
+      showNav: window.outerWidth <= 768
+    }
+  },
+  methods: {
+    printPage() {
+      window.print();
+    },
+    handleResize() {
+      this.showNav = window.outerWidth <= 768
+    },
+    openMobileNav() {
+      this.showNav = !this.showNav;
+    },
+  },
+  mounted() {
+    window.addEventListener('resize', this.handleResize)
+  },
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-
+<style>
+  @media screen and (max-width: 768px) {
+    nav {
+      height: 45px;
+    }
+    nav ul {
+      position: absolute;
+      top: 30px;
+      right: 0px;
+      width: 200px;
+      flex-direction: column;
+      background-color: black;
+    }
+    nav ul li {
+      height: 35px;
+    }
+    .nav-icon {
+      font-size: 25px;
+      position: absolute;
+      right: 15px;
+      top: 10px;
+    }
+  }
+  @media screen and (min-width: 769px) {
+    .nav-icon {
+      display: none;
+    }
+  }
 </style>

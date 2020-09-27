@@ -16,8 +16,8 @@
     <Contact />
     <Footer />
     <Print 
-      :hardSkills="hardSkills || []"
-      :softSkills="softSkills || []"
+      :hardSkills="skills.hardSkills || []"
+      :softSkills="skills.softSkills || []"
       :experience="experience || []"
       :social_media="social_media || []"
       :contacts="contacts || []"
